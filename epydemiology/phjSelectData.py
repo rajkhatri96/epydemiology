@@ -1517,7 +1517,7 @@ def phjSelectMatchedCaseControlSubjects(phjCasesDF,
         # 3. Get data from matched variables for the case
         # -----------------------------------------------
         # Create a dict for the data held in the matching variables in each case
-        phjTempDict = phjCasesDF.ix[i,phjMatchingVariablesList].to_dict()
+        phjTempDict = phjCasesDF.loc[i,phjMatchingVariablesList].to_dict()
         
         # The above dict is of the form: {'var1': 'a', 'var2': 3}. However, this needs
         # to be passed to a df.isin() function and, as such, needs to be of the form:
